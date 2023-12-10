@@ -271,7 +271,7 @@ employee productivity.}
 
     {
       "role" : "user",
-      "content" : "Please follow my Template and ask the user about each thing that the user have to specify"
+      "content" : "Please follow my Template and ask the user about each thing that the user have to specify and directly ask the heading section"
     }
   ])
   const [prompt, setprompt] = useState("");     //Prompt question to OpenIA

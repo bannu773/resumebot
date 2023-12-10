@@ -266,7 +266,12 @@ employee productivity.}
     },
     {
       "role" : "user",
-      "content" : "i have provided the standard format code start after \begin{document} start by asking the heading section"
+      "content" : "I have provided the standard format code start after \begin{document} start by asking the heading section and after generating heading section start asking other sections"
+    },
+
+    {
+      "role" : "user",
+      "content" : "Please follow my Template and ask the user about each thing that the user have to specify"
     }
   ])
   const [prompt, setprompt] = useState("");     //Prompt question to OpenIA
@@ -326,7 +331,7 @@ employee productivity.}
       console.log("HI");
       let response = await openai.createChatCompletion({ 
         
-        model: "gpt-3.5-turbo",
+        model: "gpt-3.5-turbo-1106",
         temperature: 0,
         // max_tokens: 4000,
         messages: newMessages,
@@ -345,9 +350,6 @@ employee productivity.}
       newMessages.push({role: "assistant", content: answer})
       setmessageList(newMessages)
       console.log(newMessages)
-
-      
-
     }
 
     // Check if any errors 
